@@ -3,14 +3,19 @@ import { View, Text, TouchableOpacity, ActivityIndicator, FlatList } from 'react
 import { useRouter } from 'expo-router';
 import { COLORS, SIZES } from '../../../constants';
 import PopularJobCard from '../../common/cards/popular/PopularJobCard';
+import useFetch from '../../../hook/useFetch';
 
 import styles from './popularjobs.style'
 
 const Popularjobs = () => {
   const router = useRouter();
-  const isLoading = false;
-  const error = false;
-
+  const { data, error, isLoading, refetch } = useFetch(
+    'search', {
+    query: 'React developer',
+    num_pages: 2
+  }
+  );
+  console.log(data);
   return (
     <View style={styles.container}>
       <View style={styles.header}>
