@@ -29,7 +29,8 @@ const useFetch = (endpoint, query) => {
       setIsLoading(false);
     } catch (error) {
       setError(error);
-      alert("Unexpected Error Occured");
+      // alert("Unexpected Error Occured");
+      console.log(error);
     } finally {
       setIsLoading(false);
     }
