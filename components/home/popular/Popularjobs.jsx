@@ -9,7 +9,7 @@ import {
 import { useRouter } from "expo-router";
 import { COLORS, SIZES } from "../../../constants";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
-import useFetch from "../../../hook/useFetch";
+import useFetch from "../../../hook/useFetchPop";
 
 import styles from "./popularjobs.style";
 
@@ -22,7 +22,11 @@ const Popularjobs = () => {
 
   const [selectedJob, setSelectedJob] = useState();
 
-  const handleCardPress = (item) => { };
+  const handleCardPress = (item) => {
+    router.push(`/job-details/${item.job_id}`);
+    setSelectedJob(item.job_id);
+  };
+
   // console.log(data);
   return (
     <View style={styles.container}>
@@ -48,7 +52,7 @@ const Popularjobs = () => {
                 handleCardPress={handleCardPress}
               />
             )}
-            keyExtractor={(item) => item?.job_id}
+            keyExtractor={(item) => item.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal
           />
