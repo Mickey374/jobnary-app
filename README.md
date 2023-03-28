@@ -13,3 +13,7 @@ npx create-react-native-app -t with-router
 - [Expo Router: Docs](https://expo.github.io/router)
 - [Expo Router: Repo](https://github.com/expo/router)
 - [Request for Comments](https://github.com/expo/router/discussions/1)
+
+## 📝 Sample Images from the Jobnary App
+![alt text](https://github.com/Mickey374/jobnary-app/blob/main/github-images/homePage.jpg)
+![alt text](https://github.com/Mickey374/jobnary-app/blob/main/github-images/jobInfo.jpg)
